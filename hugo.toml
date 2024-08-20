@@ -1,3 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://GomesWithS.github.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Constantino Gomes'
+theme="hugo-theme-stack"
+
