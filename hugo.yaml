@@ -1,9 +1,13 @@
-paginate: 5
-
+baseURL: https://GomesWithS.github.io
+languageCode: en-us
+title: Constantino Gomes
 module:
-    hugoVersion:
-        extended: true
-        min: "0.87.0"
+  imports:
+    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+      theme: hugo-theme-stack
+
+
+paginate: 5
 
 permalinks:
     post: /p/:slug/
