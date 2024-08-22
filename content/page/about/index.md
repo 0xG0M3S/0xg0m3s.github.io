@@ -1,13 +1,12 @@
 ---
 title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+#description: Hugo, the world's fastest framework for building websites
+date: '2024-08-21'
 aliases:
   - about-us
-  - about-hugo
   - contact
 license: CC BY-NC-ND
-lastmod: '2020-10-09'
+lastmod: '2024-08-21'
 menu:
     main: 
         weight: -90
@@ -15,20 +14,25 @@ menu:
             icon: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Welcome to my blog!
 
-Hugo makes use of a variety of open source projects including:
+I'm a software engineer with 8 years of experience, currently transitioning into the world of web security. This space is dedicated to documenting my journey as I delve into the setup and management of a home lab environment, exploring the simulation and configuration of networks, servers, virtual machines, and various facets of cybersecurity.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+For more details about my journey read [this post]({{< relref "/post/Introduction" >}}).
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+**Why this blog?**
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+As I embark on this path, I’ve realized that sharing my experiences not only solidifies my understanding but also creates a valuable resource for others who might be on a similar journey. Whether you're a seasoned professional or just starting out, my hope is that you’ll find something useful here—be it a solution to a problem you’re facing or inspiration for your next project.
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+**What to expect?**
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+In this blog, you'll find:
+
+Write-ups on a variety of topics related to home labs, networking, and cybersecurity, where I break down complex concepts and share insights gained along the way.
+Step-by-step guides on setting up and configuring different environments within a home lab.
+Challenges and solutions I encounter as I push the boundaries of my knowledge and skills.
+Personal reflections on the lessons learned, successes, and the occasional setbacks.
+This blog serves as both a personal reference for my ongoing projects and a resource for anyone interested in the technical and creative aspects of building and securing home lab environments.
+
+Thank you for stopping by, and I hope you find the content here both informative and inspiring!
+
