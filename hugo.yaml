@@ -180,6 +180,11 @@ menu:
           url: https://github.com/GomesWithS
           params:
               icon: brand-github
+        - identifier: linkedin
+          name: LinkedIn
+          url: https://www.linkedin.com/in/constantinogomes/
+          params:
+              icon: brand-linkedin
 
 
 related:
