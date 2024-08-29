@@ -5,7 +5,6 @@ date: '2024-08-21'
 aliases:
   - about-us
   - contact
-license: CC BY-NC-ND
 lastmod: '2024-08-21'
 menu:
     main: 
@@ -18,7 +17,7 @@ Welcome to my blog!
 
 I'm a software engineer with 8 years of experience, currently transitioning into the world of web security. This space is dedicated to documenting my journey as I delve into the setup and management of a home lab environment, exploring the simulation and configuration of networks, servers, virtual machines, and various facets of cybersecurity.
 
-For more details about my journey read [this post]({{< relref "/post/MyJourneySoFar" >}}).
+For more details about my journey read [this post]({{< relref "/post/2024/MyJourneySoFar" >}}).
 
 **Why this blog?**
 
