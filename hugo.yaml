@@ -38,8 +38,8 @@ params:
             src: img/avatar.png
 
     article:
-        headingAnchor: false
-        math: false
+        headingAnchor: true
+        math: true
         toc: true
         readingTime: true
         license:
@@ -141,7 +141,6 @@ params:
                   limit: 10
         page:
             - type: toc
-        page: []
 
     opengraph:
         twitter:
@@ -197,3 +196,22 @@ related:
 
         - name: categories
           weight: 200
+
+markup:
+  goldmark:
+    extensions:
+        extras:
+            delete:
+            enable: true
+            insert:
+            enable: true
+            mark:
+            enable: true
+            subscript:
+            enable: true
+            superscript:
+            enable: true
+    parser:
+        attribute:
+            block: true
+            title: true

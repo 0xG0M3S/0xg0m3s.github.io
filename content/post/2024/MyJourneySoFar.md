@@ -6,6 +6,18 @@ tags = ['Career','Skills','Continuous Learning','Tech Journey','Professional Gro
 weight = 1
 +++
 
+## TL;DR (Too Long; Didn't Read)
+
+For those with the attention span of a goldfish or just feeling lazy, here's my journey in a nutshell:
+
+I'm a Software engineer with a Master's degree in Computer Engineering and 8+ years of experience in developing custom web solutions across various industries. 
+
+My professional journey began as an assistant professor at university, where I honed my ability to simplify complex programming concepts. In 2015, I led a six-month freelance project with Global Change Fluxphera, developing a collaborative virtual real-time web game using Node.js and AWS, which enhanced my adaptability and technical skills. In 2016, I transitioned to working with OutSystems and cloud technologies, notably migrating an on-premise CRM system to the cloud. From 2019 to 2024, I was with IG&H, contributing to a wide range of projects, including developing a healthcare platform for diabetic patients, migrating pension fund management systems, integrating Azure services, and leading the design of a Performance Evaluation App with a microservices architecture. I also played a pivotal role in digitalizing a travel agency's customer support system by integrating AI and automation, and I won first prize at a healthcare hackathon for developing a tool to streamline the acquisition of medical equipment. My last project involved implementing an ontology application for the Netherlands pension system, where I created a custom language and parser for complex condition validation.
+
+Now, I’m eager to dive deeper into cybersecurity, particularly web security and pentesting.
+
+---
+
 Hello! I'm a software engineer with a deep passion for technology that started at a very young age. 
 
 I was born and raised in Portugal, where my curiosity for technology and computers began. I was always fascinated by how things worked. This fascination eventually led me to pursue a degree in Computer Science in Lisbon.
