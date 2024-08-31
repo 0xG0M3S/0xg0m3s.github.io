@@ -215,3 +215,4 @@ markup:
         attribute:
             block: true
             title: true
+        wrapStandAloneImageWithinParagraph: false

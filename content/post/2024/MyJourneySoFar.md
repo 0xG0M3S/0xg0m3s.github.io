@@ -3,7 +3,7 @@ title = 'From Software Engineering to Cybersecurity: My Journey So Far'
 date = 2024-08-20T08:53:41-05:00
 tags = ['Career','Skills','Continuous Learning','Tech Journey','Professional Growth'
 ]
-weight = 1
+#weight = 1
 +++
 
 ## TL;DR (Too Long; Didn't Read)
