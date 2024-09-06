@@ -1,57 +1,11 @@
 +++
-title = 'From Software Engineering to Cybersecurity: My Journey So Far'
-date = 2024-08-20T08:53:41-05:00
+title = 'From Software Engineering to Cybersecurity: Professional Path'
+date = 2024-08-21T08:53:43-05:00
 tags = ['Career','Skills','Continuous Learning','Tech Journey','Professional Growth'
 ]
+#categories = ['Professional Growth']
 #weight = 1
 +++
-
-## TL;DR (Too Long; Didn't Read)
-
-For those with the attention span of a goldfish or just feeling lazy, here's my journey in a nutshell:
-
-I'm a Software engineer with a Master's degree in Computer Engineering and 8+ years of experience in developing custom web solutions across various industries. 
-
-My professional journey began as an assistant professor at university, where I honed my ability to simplify complex programming concepts. In 2015, I led a six-month freelance project with Global Change Fluxphera, developing a collaborative virtual real-time web game using Node.js and AWS, which enhanced my adaptability and technical skills. In 2016, I transitioned to working with OutSystems and cloud technologies, notably migrating an on-premise CRM system to the cloud. From 2019 to 2024, I was with IG&H, contributing to a wide range of projects, including developing a healthcare platform for diabetic patients, migrating pension fund management systems, integrating Azure services, and leading the design of a Performance Evaluation App with a microservices architecture. I also played a pivotal role in digitalizing a travel agency's customer support system by integrating AI and automation, and I won first prize at a healthcare hackathon for developing a tool to streamline the acquisition of medical equipment. My last project involved implementing an ontology application for the Netherlands pension system, where I created a custom language and parser for complex condition validation.
-
-Now, I’m eager to dive deeper into cybersecurity, particularly web security and pentesting.
-
----
-
-Hello! I'm a software engineer with a deep passion for technology that started at a very young age. 
-
-I was born and raised in Portugal, where my curiosity for technology and computers began. I was always fascinated by how things worked. This fascination eventually led me to pursue a degree in Computer Science in Lisbon.
-
-From an early age, I was drawn to programming. I have fond memories of exploring on an old Windows 95 computer and experimenting with microcontrollers. My father played a significant role in nurturing my interests, giving me a book on C programming when I wanted to learn how to control LEDs with microcontrollers. This early exposure to technology set the foundation for my future career as a software engineer.
-
-Though my career has been rooted in software engineering, my interest in cybersecurity has been present since my teenage years. While there weren't many opportunities in this field in Portugal early on, I've always stayed curious and informed. Now, as I take a break and shift gears, I'm diving into cybersecurity with the goal of integrating it into my work with web technologies.
-
-This journey from software engineering to cybersecurity feels like a natural extension of my curiosity and passion for technology, as I continue to explore and innovate in new areas.
-
-## My Academia Path
-
-In 2009, I embarked on my academic journey in Computer Engineering, which culminated in earning a master’s degree in 2015. Throughout my time at university, I developed a strong affinity for various subjects, particularly those that challenged my understanding of systems, programming languages, and security. 
-
-I had to work on a diverse range of projects, predominantly using Java (SE 6 and SE 7), but also exploring other languages like C, C++, HTML, CSS, JavaScript, OCaml, Objective-C, and Prolog. My passion for learning about different technologies and topics was a driving force throughout my academic career.
-
-During my studies, the courses I enjoyed the most were:
-
-- Concurrency and Parallelism: In this course, we were tasked with analyzing a 10GB dump of Twitter data. Using Apache Storm, I processed the tweets to identify the top 10 users with the most tweets, utilizing georeferenced data. By mapping these tweets, I was able to infer the workplaces, gyms, and even the residences of these individuals—a project that deepened my understanding of big data processing and real-time analytics.
-
-- Computer Networks: One of the most fascinating experiences was learning about and configuring protocols like TCP, UDP, DNS, BGP, and RIP on Cisco routers in a lab environment. This hands-on experience provided me with a solid foundation in understanding the stack of protocols that continue to underpin the internet today.
-
-- Artificial Intelligence: This course introduced me to the core concepts behind neural networks, laying the groundwork for understanding the deep learning models that have become so prevalent in today’s AI landscape.
-
-- Data Warehousing (SAIA Project): In this project, we analyzed student bidding and university results data to predict the number of openings the university should offer for the next year. This project enhanced my skills in data analysis and predictive modeling.
-
-- Integrative Project: For my capstone project, I developed the winning application in my class—a management system for scientific conferences. The app, implemented in Objective-C for iOS 6 on the iPad, managed key speakers, regular speakers, rooms, booths, and participants, showcasing my ability to design and implement comprehensive solutions.
-
-- Master’s Dissertation: My dissertation focused on database performance, specifically testing the Non-Monotonic Snapshot Isolation (NMSI) algorithm as a potential replacement for Snapshot Isolation (SI) in traditional databases. The goal was to evaluate whether NMSI could maintain the same ACID guarantees while improving performance—a study that deepened my expertise in database systems and transactional consistency.
-
-My academic journey provided me with a solid foundation in computer engineering, equipping me with the skills and knowledge to tackle complex problems and explore diverse areas within the field. These experiences have been instrumental in shaping my professional path.
-
-
-## My Professional Path
 
 My professional journey began during my time at university, where I worked as an assistant professor. This role involved teaching and helping students from various engineering disciplines learn the basics of programming. It helped me refined my ability to break down complex ideas into simpler parts.
 
@@ -79,14 +33,3 @@ In 2023, I led the digitalization project for a travel agency, where I integrate
 Later that year, I won First Prize in a competition, demonstrating how Outsystems can excel in rapidly developing a proof of concept within just a few hours. I participated in the Healthcare Hackathon in Mainz, Germany. The event aimed to "Rethink health" by bringing together interdisciplinary teams of doctors, nurses, experts, employees, and patients to develop creative solutions for the future of healthcare. As one of the key developers, my team and I presented a transformation tool designed to streamline the back-office process for acquiring medical equipment in clinics using *Outsystems* and *DocuSign*. This tool enabled clinics to manage the entire acquisition process, from initial requests to formal contract creation with suppliers, all while leveraging digital signatures for approval from various stakeholders.
 
 In my last project with IG&H, we implemented an ontology application for the pension solution domain. The goal was to define the Netherlands pension system, from legislation to the services provided, enabling the generation of quotes and contracts through the application. The most challenging and interesting aspect was creating a new language to represent conditions between the ontology's properties and concepts. To validate the ontology, we built a parser and interpreter using *JavaScript* with *PeggyJS*, allowing it to run in a dedicated javascript environment like *Azure Functions* or on the Outsystems server through integration with the *Jint* JS engine.
-
-## Conclusion
-
-Throughout my time at IG&H, I consistently focused on innovation, problem-solving, and leveraging emerging technologies to deliver impactful solutions. My professional path, from freelancing to senior roles has been shaped by a commitment to continuous learning and adapting to the ever-evolving tech landscape.
-
-Now, I’m eager to dive deeper into cybersecurity, particularly web security and pentesting. This transition feels like a natural extension of my career, allowing me to combine my software engineering expertise with my long-standing interest in cybersecurity.
-
-To kickstart this new chapter, I’ve begun exploring various cybersecurity topics, from setting up home labs to studying for relevant certifications. I’m particularly interested in how web security can be integrated into the development process, ensuring that applications are both functional and secure. As I continue to build my knowledge and skills, I’m excited to see how this journey unfolds and how it will shape my future career.
-
-As I look back on my career so far, I’m grateful for the experiences and opportunities that have shaped me into the professional I am today. Venturing into cybersecurity is an exciting new chapter, and I’m committed to continuous learning and sharing my journey with the community. I’m looking forward to exploring new frontiers in technology and helping others along the way.
-

@@ -6,6 +6,7 @@ module:
     - path: github.com/CaiJimmy/hugo-theme-stack/v3
       theme: hugo-theme-stack
 
+enableRobotsTXT: true
 
 paginate: 5
 
@@ -141,6 +142,8 @@ params:
                   limit: 10
         page:
             - type: toc
+        page: []
+        
 
     opengraph:
         twitter:
