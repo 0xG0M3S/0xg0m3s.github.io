@@ -48,8 +48,11 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: false
-        provider: disqusjs
+        enabled: true
+        provider: custom
+
+        custom:
+            siteName: gomeswiths
 
         disqusjs:
             shortname: gomeswiths
