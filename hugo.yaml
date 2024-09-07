@@ -48,12 +48,12 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
-        provider: remark42
+        enabled: false
+        provider: disqusjs
 
         disqusjs:
-            shortname:
-            apiUrl:
+            shortname: gomeswiths
+            apiUrl: https://gomeswiths.disqus.com
             apiKey:
             admin:
             adminLabel:
@@ -70,8 +70,8 @@ params:
             theme:        
 
         remark42:
-            host: https://remark.myomegahub.xyz
-            site: 'remark'
+            host: 
+            site: 
             locale:
 
         vssue:
