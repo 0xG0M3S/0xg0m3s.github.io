@@ -19,7 +19,7 @@ In 2016, I transitioned to working with OutSystems and cloud technologies, notab
 
 From 2019 to 2024, I was with IG&H, contributing to a wide range of projects, including developing a healthcare platform for diabetic patients, migrating pension fund management systems, integrating Azure services, and leading the design of a Performance Evaluation App with a microservices architecture. 
 
-I also played a pivotal role in digitalizing a travel agency's customer support system by integrating AI and automation, and I won first prize at a healthcare hackathon for developing a tool to streamline the acquisition of medical equipment. My last project involved implementing an ontology application for the Netherlands pension system, where I created a custom language and parser for complex condition validation.
+I also played a key role in digitalizing a travel agency's customer support system by integrating AI and automation, and I won first prize at a healthcare hackathon for developing a tool to streamline the acquisition of medical equipment. My last project involved implementing an ontology application for the Netherlands pension system, where I created a custom language and parser for complex condition validation.
 
 Now, I’m eager to dive deeper into cybersecurity, particularly web security and pentesting. I’ve begun exploring various cybersecurity topics, from setting up home labs to studying for relevant certifications. I’m particularly interested in how web security can be integrated into the development process, ensuring that applications are both functional and secure. As I continue to build my knowledge and skills, I’m excited to see how this journey unfolds and how it will shape my future career.
 
