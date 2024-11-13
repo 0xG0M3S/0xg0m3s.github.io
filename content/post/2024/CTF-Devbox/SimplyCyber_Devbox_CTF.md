@@ -8,6 +8,8 @@ categories = ['Writeups', 'Cyber']
 
 In this write-up, I’ll be sharing my process for completing the **Devbox** CTF challenge, which focused on local file inclusion (LFI) vulnerabilities and required careful exploration of the system’s misconfigurations to retrieve four flags. Initially, I didn’t plan to document my journey, but after completing the challenge, I wanted to share my process with the community.
 
+[Devbox Room - Try Hack Me](https://tryhackme.com/r/room/devbox)
+
 ---
 
 ## Background
