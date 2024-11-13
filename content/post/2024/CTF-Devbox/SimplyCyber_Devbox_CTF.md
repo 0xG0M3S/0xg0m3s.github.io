@@ -41,6 +41,7 @@ This revealed two open ports:
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113133220.png)
 
 - **Port 8080**: This port hosted a “Self-Debugger” page, seemingly for a Python application.
+
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113133318.png)
 
 - **Port 22**: SSH Server
@@ -76,6 +77,7 @@ http://10.10.214.82/notes
 Opening this path revealed **Admin credentials** and the first flag.
 
 Finally gobuster reveal interesting pages like `notes` and `admin`
+
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113134120.png)
 
 ---
@@ -83,6 +85,7 @@ Finally gobuster reveal interesting pages like `notes` and `admin`
 ## Step 3: Accessing the CMS Admin Panel
 
 Investigating the `admin` path reveal a CMS application.
+
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113134341.png)
 
 With the credentials from `notes`, I tried accessing the admin panel at:
@@ -135,6 +138,7 @@ exploit
 Now I could upload  `reverse.elf` to the machine.
 
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113135109.png)
+
 After uploading this file via the CMS’s media tool, I executed `chmod +x reverse.elf` and `/reverse.elf` on the web shell:
 
 ![](/post/2024/ctf-devbox/images/pasted%20image%2020241113135241.png)
