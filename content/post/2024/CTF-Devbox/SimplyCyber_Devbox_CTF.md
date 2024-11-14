@@ -167,7 +167,18 @@ I downloaded `id_ecdsa` to my machine using Meterpreter’s `download` command:
 download id_ecdsa
 ```
 
-I then tested SSH access for all users, beginning with `developer`, and finally succeeded as `gitolite3` but it didn't gave a shell:
+I then tested SSH access for all users without success.
+
+Then I notice on a folder named `gitolite3`. What is gitolite3?
+
+From the [documentation](https://gitolite.com/gitolite/index.html)
+```
+Gitolite allows you to setup git hosting on a central server, with fine-grained access control and many more powerful features.
+```
+
+The documentation uses the user `gitolite3`, so I check if this user was present: `cat /etc/passwd`
+
+With this new user I tried again to ssh, this time succeeded, but it didn't gave a shell:
 
 ```bash
 ssh -i id_ecdsa gitolite3@10.10.214.82
@@ -177,19 +188,22 @@ However it looks like gitolite3 is some kind of application that can respond to 
 
 ![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113140458.png)
 
-What is gitolite3?
 
-From the [documentation](https://gitolite.com/gitolite/index.html)
-```
-Gitolite allows you to setup git hosting on a central server, with fine-grained access control and many more powerful features.
-```
+
 
 This granted access to the **gitolite3** account, which allowed me to view and clone Git repositories on the server.
 
-```sh
+Since git uses the ssh-agent as a authentication to the repository, I added the private key `id_ecdsa` to the ssh-agent with:
+
+```
 ssh-add id_ecdsa
-git clone gitolite3@10.10.135.183:debugger_app
-git clone gitolite3@10.10.135.183:testing
+```
+
+Then cloned the repositories:
+
+```sh
+git clone gitolite3@10.10.214.82:debugger_app
+git clone gitolite3@10.10.214.82:testing
 ```
 
 ---
@@ -199,7 +213,30 @@ git clone gitolite3@10.10.135.183:testing
 One of the repositories, named `debugger_app`, contained source code for a Flask-based debugging application. Reviewing the code, I found that the application checked for a cookie `debugger_cookie` with a hardcoded value:
 
 ```python
+app = Flask(__name__)
+
+# Define a hardcoded cookie value
 HARDCODED_COOKIE_VALUE = "PLACEHOLDER"
+
+def execute_command(command):
+try:
+	# Run the shell command and capture the output
+	result = subprocess.run(command, shell=True, capture_output=True, text=True)
+	output = result.stdout
+	error = result.stderr
+	
+	if error:
+		return f"Error: {error}"
+	return output
+except Exception as e:
+	return f"Failed to execute command: {str(e)}"
+
+# Middleware to check the cookie for every request
+@app.before_request
+def check_cookie():
+	cookie = request.cookies.get('debugger_cookie')
+	if cookie != HARDCODED_COOKIE_VALUE:
+		abort(403) # Forbidden access if cookie is missing or incorrect
 ```
 
 To find the original value, I examined the Git history with:
@@ -220,7 +257,7 @@ The cookie value was:
 HARDCODED_COOKIE_VALUE = "r3m0t3d3bugg3r!"
 ```
 
-Using a browser cookie editor, I set this cookie for `http://10.10.91.197:8080` and accessed the debugger interface.
+Using a [browser cookie editor](https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/), I set this cookie for `http://10.10.214.82:8080` and accessed the debugger interface.
 
 ![](/post/2024/CTF-Devbox/images/Pasted%20image%2020241113140951.png)
 
